@@ -43,11 +43,20 @@ GEM
       json
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
+    columnize (0.3.6)
+    debugger (1.2.4)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.1.1)
+      debugger-ruby_core_source (~> 1.1.7)
+    debugger-linecache (1.1.2)
+      debugger-ruby_core_source (>= 1.1.1)
+    debugger-ruby_core_source (1.1.7)
     diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.3.1)
+    hashr (0.0.22)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -94,6 +103,8 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     ref (1.0.2)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec-core (2.12.2)
     rspec-expectations (2.12.1)
       diff-lcs (~> 1.1.3)
@@ -126,6 +137,12 @@ GEM
       ref
     thor (0.16.0)
     tilt (1.3.3)
+    tire (0.5.4)
+      activemodel (>= 3.0)
+      hashr (~> 0.0.19)
+      multi_json (~> 1.3)
+      rake
+      rest-client (~> 1.6)
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
@@ -142,6 +159,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara-webkit
+  debugger
   execjs
   jquery-rails
   pg
@@ -149,4 +167,5 @@ DEPENDENCIES
   rspec-rails
   sass-rails
   therubyracer
+  tire
   uglifier
