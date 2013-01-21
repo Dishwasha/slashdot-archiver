@@ -25,6 +25,66 @@ describe "loading slashdot archive by year", :js => true do
   it "1998" do
     load_year '1998'
   end
+
+  it "1990" do
+    load_year '1998'
+  end
+
+  it "2000" do
+    load_year '1998'
+  end
+
+  it "2001" do
+    load_year '1998'
+  end
+
+  it "2002" do
+    load_year '1998'
+  end
+
+  it "2003" do
+    load_year '1998'
+  end
+
+  it "2004" do
+    load_year '1998'
+  end
+
+  it "2005" do
+    load_year '1998'
+  end
+
+  it "2006" do
+    load_year '1998'
+  end
+
+  it "2007" do
+    load_year '1998'
+  end
+
+  it "2008" do
+    load_year '1998'
+  end
+
+  it "2009" do
+    load_year '1998'
+  end
+
+  it "2010" do
+    load_year '1998'
+  end
+
+  it "2010" do
+    load_year '1998'
+  end
+
+  it "2012" do
+    load_year '1998'
+  end
+
+  it "2013" do
+    load_year '1998'
+  end
 end
 
 def load_year year

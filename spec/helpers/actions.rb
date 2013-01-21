@@ -14,4 +14,8 @@ module Actions
   def load_rip
     page.execute_script("document.getElementsByTagName('body')[0].appendChild(document.createElement('script')).setAttribute('src', 'http://localhost:3000/assets/rip.js');")
   end
+
+  def load_article
+    page.execute_script("document.getElementsByTagName('body')[0].appendChild(document.createElement('script')).setAttribute('src', 'http://localhost:3000/assets/article.js');")
+  end
 end

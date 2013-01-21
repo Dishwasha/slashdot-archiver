@@ -23,7 +23,6 @@ class ArticlesController < ApplicationController
   def create
     article = Article.find(params[:article][:link].split('/').last)
     unless article && article.id.present?
-      #debugger
       article = Article.create(params[:article])
     end
 
@@ -34,6 +33,13 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    article = Article.find(params[:id])
+
+    if article.metadata.nil?
+      article.update_attributes(params[:article])
+    else
+      head :ok
+    end
   end
 
   def destroy
@@ -46,6 +52,7 @@ class ArticlesController < ApplicationController
   private
   def access_control
     headers['Access-Control-Allow-Origin'] = '*'
+    headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
     headers['Access-Control-Allow-Headers'] = 'X-Requested-With, Content-Type'
   end
 end
